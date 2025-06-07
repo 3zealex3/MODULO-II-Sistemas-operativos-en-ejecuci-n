@@ -1,0 +1,9 @@
+sudo nano /etc/crontab
+crontab -e
+crontab -l
+ls /tmp/
+echo "sudo rm -rf /tmp/" | at now + 1 minute
+atq
+ls /tmp/
+clear
+
