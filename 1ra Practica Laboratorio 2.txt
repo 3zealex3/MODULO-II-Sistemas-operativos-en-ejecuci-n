@@ -1,0 +1,50 @@
+sudo dnf update -y
+clear
+dnf repolist
+sudo dnf repolist -y
+clear
+dnf search bashtop
+sudo dnf intall epel-release
+sudo dnf install epel-release
+sudo dnf install bashtop
+dnf search bashtop
+clear
+sudo dnf install dnf-plugins-core -y
+sudo dnf copr enable atim/bashtop -y
+dnf repolist
+dnf search bashtop
+clear
+sudo dnf install python3-pip -y
+pip install bashtop
+clear
+sudo dnf install git python-devel -y
+sudo make install
+bashtop
+clear
+git clone https://github.com/aristocratos/bashtop.git 
+cd bashtop
+ls
+sudo make install
+sudo dnf install
+clear
+ls
+bashtop
+./bashtop
+cd ..
+ls
+cd ..
+ls
+cd 20242286-ezequiel/
+ls
+cd bashtop
+ls
+./bashtop
+cd ..
+ls
+cd 20242286-ezequiel/
+ls
+rm -fr bashtop/
+ls
+find / -name bashtop 2>/dev/null
+sudo rm -rf .config/bashtop
+find / -name bashtop 2>/dev/null
