@@ -1,0 +1,19 @@
+sudo fdisk /dev/nvme0n2
+sudo mkfst ext4 /dev/nvme0n2
+sudo mkfs ext4 /dev/nvme0n2
+sudo mkfs.ext4 /dev/nvme0n2
+sudo mkdir -p /mnt/midisco
+sudo mount //dev/nvme0n2 /mnt/midisco
+echo "Practica 3" | sudo tee /mnt/midisco/AdrianAlcantara.txt
+lsblk
+sudo fdisk /dev/nvme0n2
+clear
+ls /mnt/midisco
+sudo fdisk /dev/nvme0n2
+lsblk
+ls /mnt/
+ls /mnt/midisco/
+ls /mnt/midisco/AdrianAlcantara.txt
+cat /mnt/midisco/AdrianAlcantara.txt
+clear
+history
