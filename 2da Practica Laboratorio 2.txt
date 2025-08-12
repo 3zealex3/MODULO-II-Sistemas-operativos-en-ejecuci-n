@@ -1,9 +1,38 @@
 sudo nano /etc/crontab
+
+# For details see man 4 crontabs
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,>
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+
+
+
+
+
 crontab -e
+
+
+------------1. Actualizar el sistema todas las tardes a las 11 p.m. (usando cron)----------------
+
+0 23 * * * sudo dnf upgrade -y && sudo dnf autoremove -y
+
+
+----------2. Reiniciar la máquina todos los domingos a las 3 a.m. (usando cron)-------------------
+
+0 3 * * 0 sudo /sbin/reboot
+
+
 crontab -l
 ls /tmp/
 echo "sudo rm -rf /tmp/" | at now + 1 minute
 atq
 ls /tmp/
 clear
+
 
